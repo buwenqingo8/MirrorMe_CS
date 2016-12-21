@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5249ABF1-3132-4CE6-9635-2CDB3E14B858}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APIManage</RootNamespace>
+    <AssemblyName>APIManage</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Web\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\BaseTools\dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client.cs" />
+    <Compile Include="Domain\ApiInfo.cs" />
+    <Compile Include="Domain\AppInfo.cs" />
+    <Compile Include="Domain\ErrInfo.cs" />
+    <Compile Include="Entity\CardJson.cs" />
+    <Compile Include="Entity\MemberVOXML.cs" />
+    <Compile Include="Entity\MemberVO.cs" />
+    <Compile Include="Entity\PointVO.cs" />
+    <Compile Include="Entity\PointVOXML.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="IClient.cs" />
+    <Compile Include="IRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Requests\DownloadFilesRequest.cs" />
+    <Compile Include="Requests\Goods\GoodsShelvesRequest.cs" />
+    <Compile Include="Requests\Goods\GoodsWithCodeRequest.cs" />
+    <Compile Include="Requests\LoginRequest.cs" />
+    <Compile Include="Requests\Member\GetPublicKey.cs" />
+    <Compile Include="Requests\Member\PosExistMemberInfo.cs" />
+    <Compile Include="Requests\Member\PosPoint.cs" />
+    <Compile Include="Requests\Member\QueryCertiByHyCard.cs" />
+    <Compile Include="Requests\Member\Register.cs" />
+    <Compile Include="Requests\Member\SignIn.cs" />
+    <Compile Include="Requests\Member\SMS.cs" />
+    <Compile Include="Requests\Member\UpdateMem.cs" />
+    <Compile Include="Requests\NetPay\AlipayRequest.cs" />
+    <Compile Include="Requests\NetPay\BaifubaoRequest.cs" />
+    <Compile Include="Requests\NetPay\CreateOrderRequest.cs" />
+    <Compile Include="Requests\NetPay\TenpayRequest.cs" />
+    <Compile Include="Requests\NetPay\UpdateOrderRequest.cs" />
+    <Compile Include="Requests\NetPay\WeixinRequest.cs" />
+    <Compile Include="Requests\NoticesRequest.cs" />
+    <Compile Include="Requests\RequestBase.cs" />
+    <Compile Include="Requests\RulesRequest.cs" />
+    <Compile Include="Requests\UploadFilesRequest.cs" />
+    <Compile Include="Response.cs" />
+    <Compile Include="Responses\DownloadFilesResponse.cs" />
+    <Compile Include="Responses\Goods\GoodsShelvesResponses.cs" />
+    <Compile Include="Responses\Goods\GoodsWithCodeResponse.cs" />
+    <Compile Include="Responses\LoginResponse.cs" />
+    <Compile Include="Responses\NetPay\AlipayResponse.cs" />
+    <Compile Include="Responses\NetPay\BaifubaoResponse.cs" />
+    <Compile Include="Responses\NetPay\CreateOrderResponse.cs" />
+    <Compile Include="Responses\NetPay\TenpayResponse.cs" />
+    <Compile Include="Responses\NetPay\UpdateOrderResponse.cs" />
+    <Compile Include="Responses\NetPay\WeixinResponse.cs" />
+    <Compile Include="Responses\NoticesResponse.cs" />
+    <Compile Include="Responses\RulesResponse.cs" />
+    <Compile Include="Responses\UploadFilesResponse.cs" />
+    <Compile Include="Web References\WebReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebReferenceAA\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebReferenceCC\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wemediacn\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Responses\Member\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{676584E1-11BA-4F20-9892-DAC974897018}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Requests\Xml_Requests\XMLFile122_Request.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Requests\Xml_Requests\XMLFile12_Request.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Requests\Xml_Requests\XMLFile8.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Responses\Xml_Responses\XMLFile12_Response.xml" />
+    <None Include="Web References\wemediacn\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wemediacn\smsservice.disco" />
+    <None Include="Web References\WebReference1\QueryCertiByHyCard.disco" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebReference1\QueryCertiByHyCard.wsdl" />
+    <None Include="Web References\WebReference1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebReferenceAA\IHsCRMWebSrvservice.wsdl" />
+    <None Include="Web References\WebReferenceAA\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebReferenceAA\TReturnInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WebReferenceCC\IHsCRMWebSrvservice.wsdl" />
+    <None Include="Web References\WebReferenceCC\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebReferenceCC\TReturnInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wemediacn\smsservice.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://193.168.9.226:801/QueryCertiByHyCard.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReference1\</RelPath>
+      <UpdateFromURL>http://193.168.9.226:801/QueryCertiByHyCard.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>APIManage_WebReference1_QueryCertiByHyCard</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://193.168.9.226:802//HsCRMWebSrv/HsCRMWebSrv.dll/wsdl/IHsCRMWebSrv">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReferenceCC\</RelPath>
+      <UpdateFromURL>http://193.168.9.226:802//HsCRMWebSrv/HsCRMWebSrv.dll/wsdl/IHsCRMWebSrv</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>APIManage_WebReferenceCC_IHsCRMWebSrvservice</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://222.173.107.76:8000/HisComSvr/HsCRMWebSrv.dll/wsdl/IHsCRMWebSrv">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReferenceAA\</RelPath>
+      <UpdateFromURL>http://222.173.107.76:8000/HisComSvr/HsCRMWebSrv.dll/wsdl/IHsCRMWebSrv</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>APIManage_WebReferenceAA_IHsCRMWebSrvservice</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.wemediacn.net/webservice/smsservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wemediacn\</RelPath>
+      <UpdateFromURL>http://www.wemediacn.net/webservice/smsservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>APIManage_wemediacn_SMSService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

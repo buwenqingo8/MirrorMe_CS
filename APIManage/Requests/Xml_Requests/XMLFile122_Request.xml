@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<InputParameter>
+  <Head>
+    <!—明文-->
+    <Tag>校验值</Tag>
+    <ClientCode>10000000000000000000</ClientCode>
+  </Head>
+  <Body>
+    <!--密文-->
+    <?xml version="1.0" encoding="UTF-8"?>
+    <InputParameter>
+      <Random>3455</Random>
+      <WorkGuid> {64658C7D-A50A-4175-88EF-71CE8D52557A} </WorkGuid>
+      <AppID>手机端用户ID</AppID>
+      <CardTypeCode>
+        分配的卡类型
+        </CardTypeCode>
+        <ExtCardNo>外部系统卡号</ExtCardNo>
+        <YwType>业务类型</YwType>
+        <Mobile>手机</Mobile>
+        <Mailaddr>通讯地址</Mailaddr>
+        <OrgCode>注册组织</OrgCode>
+        <CertNo>身份证号</CertNo>
+        <Gender>性别</Gender>
+        <UserCode> CRM系统用户编码</UserCode>
+        <VipName>
+          会员姓名</VipName>
+          <OcUserCode>卡保管人</OcUserCode>
+          <OldBillNo>外部单据号</OldBillNo>
+          <Birthday>出生日期</Birthday>
+        </InputParameter>
+  </Body>
+</InputParameter>

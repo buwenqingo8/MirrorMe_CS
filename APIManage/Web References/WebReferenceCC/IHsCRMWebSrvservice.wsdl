@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="urn:HsCRMWebSrvIntf" name="IHsCRMWebSrvservice" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns="urn:HsCRMWebSrvIntf" targetNamespace="urn:HsCRMWebSrvIntf">
+      <xs:complexType name="TReturnInfo">
+        <xs:sequence>
+          <xs:element name="RtnMsg" type="xs:string" />
+          <xs:element name="OutputPara" type="xs:string" />
+          <xs:element name="ReturnCode" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="IWsPosCommOperate0Request">
+    <part name="piFunctionCode" type="xs:int" />
+    <part name="psInputPara" type="xs:string" />
+  </message>
+  <message name="IWsPosCommOperate0Response">
+    <part name="return" type="ns1:TReturnInfo" />
+  </message>
+  <portType name="IHsCRMWebSrv">
+    <operation name="IWsPosCommOperate">
+      <input message="tns:IWsPosCommOperate0Request" />
+      <output message="tns:IWsPosCommOperate0Response" />
+    </operation>
+  </portType>
+  <binding name="IHsCRMWebSrvbinding" type="tns:IHsCRMWebSrv">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="IWsPosCommOperate">
+      <soap:operation soapAction="urn:HsCRMWebSrvIntf-IHsCRMWebSrv#IWsPosCommOperate" style="rpc" />
+      <input message="tns:IWsPosCommOperate0Request">
+        <soap:body use="encoded" namespace="urn:HsCRMWebSrvIntf-IHsCRMWebSrv" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output message="tns:IWsPosCommOperate0Response">
+        <soap:body use="encoded" namespace="urn:HsCRMWebSrvIntf-IHsCRMWebSrv" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="IHsCRMWebSrvservice">
+    <port name="IHsCRMWebSrvPort" binding="tns:IHsCRMWebSrvbinding">
+      <soap:address location="http://193.168.9.226:802/HsCRMWebSrv/HsCRMWebSrv.dll/soap/IHsCRMWebSrv" />
+    </port>
+  </service>
+</definitions>

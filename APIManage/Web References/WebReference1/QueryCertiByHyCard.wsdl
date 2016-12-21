@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="QueryCertiByHyCardFuncSoapIn">
+    <wsdl:part name="CardHyNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="QueryCertiByHyCardFuncSoapOut">
+    <wsdl:part name="QueryCertiByHyCardFuncResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:portType name="QueryCertiByHyCardSoap">
+    <wsdl:operation name="QueryCertiByHyCardFunc">
+      <wsdl:input message="tns:QueryCertiByHyCardFuncSoapIn" />
+      <wsdl:output message="tns:QueryCertiByHyCardFuncSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QueryCertiByHyCardSoap" type="tns:QueryCertiByHyCardSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryCertiByHyCardFunc">
+      <soap:operation soapAction="http://tempuri.org/QueryCertiByHyCardFunc" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="QueryCertiByHyCardSoap12" type="tns:QueryCertiByHyCardSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryCertiByHyCardFunc">
+      <soap12:operation soapAction="http://tempuri.org/QueryCertiByHyCardFunc" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="http://tempuri.org/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QueryCertiByHyCard">
+    <wsdl:port name="QueryCertiByHyCardSoap" binding="tns:QueryCertiByHyCardSoap">
+      <soap:address location="http://193.168.9.226:801/QueryCertiByHyCard.asmx" />
+    </wsdl:port>
+    <wsdl:port name="QueryCertiByHyCardSoap12" binding="tns:QueryCertiByHyCardSoap12">
+      <soap12:address location="http://193.168.9.226:801/QueryCertiByHyCard.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

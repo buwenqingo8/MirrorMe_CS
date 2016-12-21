@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="APIManage.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="APIManage_WebReferenceAA_IHsCRMWebSrvservice" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://222.173.107.76:8000/HisComSvr/HsCRMWebSrv.dll/wsdl/IHsCRMWebSrv</Value>
+    </Setting>
+    <Setting Name="APIManage_WebReferenceCC_IHsCRMWebSrvservice" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://193.168.9.226:802/HsCRMWebSrv/HsCRMWebSrv.dll/soap/IHsCRMWebSrv</Value>
+    </Setting>
+    <Setting Name="APIManage_WebReference1_QueryCertiByHyCard" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://193.168.9.226:801/QueryCertiByHyCard.asmx</Value>
+    </Setting>
+    <Setting Name="APIManage_wemediacn_SMSService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.wemediacn.net/webservice/smsservice.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
